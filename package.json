@@ -12,6 +12,8 @@
         "update:version": "version-select",
         "lint:prettier": "prettier --check .",
         "lintfix": "prettier --write --list-different .",
+        "postinstall": "npm install nuxt",
+
         "test": "react-scripts test",
         "eject": "react-scripts eject",
         "uat": "cross-env NODE_ENV=uat nuxt",
