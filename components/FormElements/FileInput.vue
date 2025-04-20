@@ -33,6 +33,7 @@
 								</div>
 								<div class="v-messages__message" v-if="image_size">
 									Recommended size &lt;= {{ image_size }} MB
+									
 								</div>
 								<div class="v-messages__message">Accepted file format: {{ filetype }}</div>
 							</div>
@@ -99,7 +100,7 @@ export default {
 		image_height: { type: Number },
 		errorMessage: { type: String },
 		value: { type: Array | String },
-		image_size: { type: Number, default: 1 },
+		image_size: { type: Number, default: 5 },
 		not_image: { type: Boolean, default: false },
 		no_hint: { type: Boolean, default: false },
 		multiple: { type: Boolean, default: false },
@@ -243,7 +244,7 @@ export default {
 				this.$refs.file.reset()
 			}
 			this.$emit('change')
-			this.render = Date.now() + Math.floor(Math.random() * 10000 + 1)
+			this.render = Date.now() + Math.floor(Math.random() * 30000 + 1)
 		},
 	},
 	mounted() {
