@@ -7,6 +7,7 @@
         "dev": "nuxt",
         "build": "nuxt build",
         "start": "nuxt start",
+        "generate": "nuxt generate",
         "lint": "yarn lint:prettier",
         "update:version": "version-select",
         "lint:prettier": "prettier --check .",
