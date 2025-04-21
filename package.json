@@ -10,7 +10,7 @@
 },
 
     "engines": {
-        "node": "18.18.0"
+        "node": "16.20.0"
     },
     "dependencies": {
         "@nuxtjs/axios": "^5.13.6",
