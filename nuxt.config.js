@@ -20,7 +20,7 @@ export default {
 	axios: { baseURL: process.env.BASE_URL },
 	server: { port: 3002, host: 'localhost' },
 	publicRuntimeConfig: { clientVersion: pkg.version },
-	dayjs: { plugins: ['relativeTime', 'IsSameOrAfter', 'Duration'] },
+	dayjs: { plugins: ['relativeTime', 'isSameOrAfter', 'duration'] },
 	modules: ['@nuxtjs/axios', '@nuxtjs/google-fonts', '@nuxtjs/dayjs'],
 	css: ['animate.css/animate.min.css', '@/assets/fonts/css/fonts.css', 'static/css/styles.css'],
 	buildModules: ['@nuxtjs/vuetify', ['@nuxtjs/dotenv', { filename: `.env.${process.env.NODE_ENV}` }]],
