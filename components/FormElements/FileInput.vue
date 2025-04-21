@@ -108,7 +108,7 @@ export default {
 		no_preview: { type: Boolean, default: false },
 		button_text: { type: String, default: 'Upload image' },
 		rounded_button_style: { type: Boolean, default: false },
-		filetype: { type: String | Array, default: 'image/webp' },
+		filetype: { type: String | Array, default: 'image' },
 	},
 	methods: {
 		async HandleFileUpload(files) {
