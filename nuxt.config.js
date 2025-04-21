@@ -1,5 +1,7 @@
 import pkg from './package.json'
 import colors from 'vuetify/es5/util/colors'
+import path from 'path';
+
 
 export default {
 	ssr: false,
@@ -8,6 +10,9 @@ export default {
 		htmlAttrs: {
 			lang: 'en',
 		},
+
+
+
 		meta: [
 			{ charset: 'utf-8' },
 			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -50,12 +55,17 @@ export default {
 		},
 	},
 	build: {
+		extend(config) {
+			config.resolve.alias['@utils'] = path.resolve(__dirname, 'utils');
+		  },
 		postcss: {
 			plugins: {
 				autoprefixer: {},
 			},
 		},
+	
 	},
+
 	googleFonts: {
 		preload: true,
 		prefetch: true,
