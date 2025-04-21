@@ -2,7 +2,7 @@
 	<v-card class="pa-4">
 		<v-row class="pt-9 px-5">
 			<v-col class="text-center">
-				<span class="text-h5">{{ edit ? 'Edit' : 'Add' }} Product Information 111</span>
+				<span class="text-h5">{{ edit ? 'Edit' : 'Add' }} Product Information</span>
 			</v-col>
 			<v-col cols="2" class="text-right">
 				<v-btn icon @click="CloseForm">
@@ -16,15 +16,16 @@
 				<v-row>
 					<v-col cols="12">
 						<v-row>
-							<v-col cols="12">
-								<label>product_name<span class="red--text">*</span></label>
-								<v-text-field
-									outlined
-									v-model="payload.product_name"
-									:rules="[rules.required]"
-									placeholder="Enter Title"
-								/>
-							</v-col>
+							
+								<v-col cols="12">
+									<label>Desktop Banner<sup class="red--text">*</sup></label>
+									<FormElementsFileInput
+										v-model="payload.product_image"
+										:errorMessage="errorMessages.product_image"
+										@change="isImagesValidated(['product_image'])"
+										:UploadAPI="HomeScreenAPI.add_homescreen_image"
+									/>
+								</v-col>
 
 							<v-col cols="6">
 								<label class="required">ingredients</label>
@@ -33,6 +34,15 @@
 									placeholder="Enter ingredients"
 									:rules="[rules.required]"
 									v-model="payload.ingredients"
+								/>
+							</v-col>
+							<v-col cols="12">
+								<label>product_name<span class="red--text">*</span></label>
+								<v-text-field
+									outlined
+									v-model="payload.product_name"
+									:rules="[rules.required]"
+									placeholder="Enter Title"
 								/>
 							</v-col>
 
@@ -46,187 +56,175 @@
 								/>
 							</v-col>
 							<v-col cols="6">
-								<label>fat <span class="red--text">*</span></label>
+								<label>fat </label>
 								<v-text-field
 									outlined
 									v-model="payload.fat"
 									placeholder="Enter SKU"
-									:rules="[rules.required]"
 								/>
 							</v-col>
 							<v-col cols="6">
-								<label>protein <span class="red--text">*</span></label>
+								<label>protein</label>
 								<v-text-field
 									outlined
 									v-model="payload.protein"
 									placeholder="Enter SKU"
-									:rules="[rules.required]"
 								/>
 							</v-col>
 							<v-col cols="6">
-								<label>carbohydrates <span class="red--text">*</span></label>
+								<label>carbohydrates</label>
 								<v-text-field
 									outlined
 									v-model="payload.carbohydrates"
 									placeholder="Enter SKU"
-									:rules="[rules.required]"
+									
 								/>
 							</v-col>
 							<v-col cols="6">
-								<label>energy <span class="red--text">*</span></label>
+								<label>energy</label>
 								<v-text-field
 									outlined
 									v-model="payload.energy"
 									placeholder="Enter SKU"
-									:rules="[rules.required]"
+									
 								/>
 							</v-col>
 							<v-col cols="6">
-								<label>acidity_as_citric_acid <span class="red--text">*</span></label>
+								<label>acidity_as_citric_acid</label>
 								<v-text-field
 									outlined
 									v-model="payload.acidity_as_citric_acid"
 									placeholder="Enter SKU"
-									:rules="[rules.required]"
+									
 								/>
 							</v-col>
 							<v-col cols="6">
-								<label>sugar <span class="red--text">*</span></label>
+								<label>sugar</label>
 								<v-text-field
 									outlined
 									v-model="payload.sugar"
 									placeholder="Enter SKU"
-									:rules="[rules.required]"
+									
 								/>
 							</v-col>
 							<v-col cols="6">
-								<label>calcium <span class="red--text">*</span></label>
+								<label>calcium</label>
 								<v-text-field
 									outlined
 									v-model="payload.calcium"
 									placeholder="Enter SKU"
-									:rules="[rules.required]"
+									
 								/>
 							</v-col>
 							<v-col cols="6">
-								<label>trans_fat <span class="red--text">*</span></label>
+								<label>trans_fat</label>
 								<v-text-field
 									outlined
 									v-model="payload.trans_fat"
 									placeholder="Enter SKU"
-									:rules="[rules.required]"
+									
 								/>
 							</v-col>
 							<v-col cols="6">
-								<label>saturated_fat <span class="red--text">*</span></label>
+								<label>saturated_fat</label>
 								<v-text-field
 									outlined
 									v-model="payload.saturated_fat"
 									placeholder="Enter SKU"
-									:rules="[rules.required]"
+									
 								/>
 							</v-col>
 							<v-col cols="6">
-								<label>sodium <span class="red--text">*</span></label>
+								<label>sodium</label>
 								<v-text-field
 									outlined
 									v-model="payload.sodium"
 									placeholder="Enter SKU"
-									:rules="[rules.required]"
+									
 								/>
 							</v-col>
 							<v-col cols="6">
-								<label>total_fat <span class="red--text">*</span></label>
+								<label>total_fat</label>
 								<v-text-field
 									outlined
 									v-model="payload.total_fat"
 									placeholder="Enter SKU"
-									:rules="[rules.required]"
+									
 								/>
 							</v-col>
 							<v-col cols="6">
-								<label>citric_acid <span class="red--text">*</span></label>
+								<label>citric_acid</label>
 								<v-text-field
 									outlined
 									v-model="payload.citric_acid"
 									placeholder="Enter SKU"
-									:rules="[rules.required]"
+									
 								/>
 							</v-col>
 							<v-col cols="6">
-								<label>taurine <span class="red--text">*</span></label>
+								<label>taurine</label>
 								<v-text-field
 									outlined
 									v-model="payload.taurine"
 									placeholder="Enter SKU"
-									:rules="[rules.required]"
+									
 								/>
 							</v-col>
 							<v-col cols="6">
-								<label>caffeine <span class="red--text">*</span></label>
+								<label>caffeine</label>
 								<v-text-field
 									outlined
 									v-model="payload.caffeine"
 									placeholder="Enter SKU"
-									:rules="[rules.required]"
+									
 								/>
 							</v-col>
 							<v-col cols="6">
-								<label>inositol <span class="red--text">*</span></label>
+								<label>inositol</label>
 								<v-text-field
 									outlined
 									v-model="payload.inositol"
 									placeholder="Enter SKU"
-									:rules="[rules.required]"
+									
 								/>
 							</v-col>
 							<v-col cols="6">
-								<label>niacin <span class="red--text">*</span></label>
+								<label>niacin</label>
 								<v-text-field
 									outlined
 									v-model="payload.niacin"
 									placeholder="Enter SKU"
-									:rules="[rules.required]"
+									
 								/>
 							</v-col>
 							<v-col cols="6">
-								<label>vitamin_b6 <span class="red--text">*</span></label>
+								<label>vitamin_b6</label>
 								<v-text-field
 									outlined
 									v-model="payload.vitamin_b6"
 									placeholder="Enter SKU"
-									:rules="[rules.required]"
+									
 								/>
 							</v-col>
 							<v-col cols="6">
-								<label>vitamin_b3 <span class="red--text">*</span></label>
+								<label>vitamin_b3</label>
 								<v-text-field
 									outlined
 									v-model="payload.vitamin_b3"
 									placeholder="Enter SKU"
-									:rules="[rules.required]"
+									
 								/>
 							</v-col>
 							<v-col cols="6">
-								<label>vitamin b12 <span class="red--text">*</span></label>
+								<label>vitamin b12</label>
 								<v-text-field
 									outlined
 									v-model="payload.vitamin_b12"
 									placeholder="Enter SKU"
-									:rules="[rules.required]"
+									
 								/>
 							</v-col>
-							<v-col cols="4">
-								<v-col cols="6">
-									<label>Desktop Banner<sup class="red--text">*</sup></label>
-									<FormElementsFileInput
-										v-model="payload.product_image"
-										:errorMessage="errorMessages.product_image"
-										@change="isImagesValidated(['product_image'])"
-										:UploadAPI="HomeScreenAPI.add_homescreen_image"
-									/>
-								</v-col>
-							</v-col>
+						
 							<v-col cols="4">
 								<v-row class="sticky-header">
 									<div class="mx-auto mt-3">
@@ -240,7 +238,7 @@
 								</v-row>
 							</v-col>
 						</v-row>
-						<small>*indicates required field</small>
+						<!-- <small>*indicates required field</small> -->
 					</v-col>
 				</v-row>
 
@@ -276,25 +274,25 @@ export default {
 			product_image: '',
 			ingredients: '',
 			weight: '',
-			fat: 'fat',
-			protein: 'energy',
-			carbohydrates: 'carbohydrates',
-			energy: 'energy',
-			acidity_as_citric_acid: 'energy',
-			sugar: 'energy',
-			calcium: 'energy',
-			trans_fat: 'energy',
-			saturated_fat: 'energy',
-			sodium: 'energy',
-			citric_acid: 'energy',
-			taurine: 'energy',
-			caffeine: 'energy',
-			inositol: 'energy',
-			niacin: 'energy',
-			vitamin_b6: 'energy',
-			vitamin_b3: 'energy',
-			vitamin_b12: 'energy',
-			total_fat:'total_fat',
+			fat: '',
+			protein: '',
+			carbohydrates: '',
+			energy: '',
+			acidity_as_citric_acid: '',
+			sugar: '',
+			calcium: '',
+			trans_fat: '',
+			saturated_fat: '',
+			sodium: '',
+			citric_acid: '',
+			taurine: '',
+			caffeine: '',
+			inositol: '',
+			niacin: '',
+			vitamin_b6: '',
+			vitamin_b3: '',
+			vitamin_b12: '',
+			total_fat:'',
 		},
 		errorMessages: { product_image: '' },
 		rules: {
@@ -419,29 +417,29 @@ try {
 
 		ResetForm() {
 			this.payload = {
-				product_name: 'product_name',
+				product_name: '',
 				product_image: '',
-				ingredients: 'ingredients',
-				weight: 'weight',
-				fat: 'fat',
-				protein: 'energy',
-				carbohydrates: 'carbohydrates',
-				energy: 'energy',
-				acidity_as_citric_acid: 'energy',
-				sugar: 'energy',
-				calcium: 'energy',
-				trans_fat: 'energy',
-				saturated_fat: 'energy',
-				sodium: 'energy',
-				citric_acid: 'energy',
-				taurine: 'energy',
-				caffeine: 'energy',
-				inositol: 'energy',
-				niacin: 'energy',
-				vitamin_b6: 'energy',
-				vitamin_b3: 'energy',
-				vitamin_b12: 'energy',
-				total_fat:"total_fat",
+				ingredients: '',
+				weight: '',
+				fat: '',
+				protein: '',
+				carbohydrates: '',
+				energy: '',
+				acidity_as_citric_acid: '',
+				sugar: '',
+				calcium: '',
+				trans_fat: '',
+				saturated_fat: '',
+				sodium: '',
+				citric_acid: '',
+				taurine: '',
+				caffeine: '',
+				inositol: '',
+				niacin: '',
+				vitamin_b6: '',
+				vitamin_b3: '',
+				vitamin_b12: '',
+				total_fat:"",
 			}
 			this.$refs?.form?.resetValidation()
 		},
