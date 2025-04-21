@@ -28,16 +28,16 @@
 								</v-col>
 
 							<v-col cols="6">
-								<label class="required">ingredients</label>
+								<label class="required">Ingredients</label>
 								<v-text-field
 									outlined
-									placeholder="Enter ingredients"
+									placeholder="Enter Ingredients"
 									:rules="[rules.required]"
 									v-model="payload.ingredients"
 								/>
 							</v-col>
 							<v-col cols="12">
-								<label>product_name<span class="red--text">*</span></label>
+								<label>Product Name<span class="red--text">*</span></label>
 								<v-text-field
 									outlined
 									v-model="payload.product_name"
@@ -47,180 +47,180 @@
 							</v-col>
 
 							<v-col cols="6">
-								<label>weight <span class="red--text">*</span></label>
+								<label>Weight <span class="red--text">*</span></label>
 								<v-text-field
 									outlined
 									v-model="payload.weight"
-									placeholder="Enter SKU"
+									placeholder="Enter Weight"
 									:rules="[rules.required]"
 								/>
 							</v-col>
 							<v-col cols="6">
-								<label>fat </label>
+								<label>Fat </label>
 								<v-text-field
 									outlined
 									v-model="payload.fat"
-									placeholder="Enter SKU"
+									placeholder="Enter Fat"
 								/>
 							</v-col>
 							<v-col cols="6">
-								<label>protein</label>
+								<label>Protein</label>
 								<v-text-field
 									outlined
 									v-model="payload.protein"
-									placeholder="Enter SKU"
+									placeholder="Enter Protein"
 								/>
 							</v-col>
 							<v-col cols="6">
-								<label>carbohydrates</label>
+								<label>Carbohydrates</label>
 								<v-text-field
 									outlined
 									v-model="payload.carbohydrates"
-									placeholder="Enter SKU"
+									placeholder="Enter Carbohydrates"
 									
 								/>
 							</v-col>
 							<v-col cols="6">
-								<label>energy</label>
+								<label>Energy</label>
 								<v-text-field
 									outlined
 									v-model="payload.energy"
-									placeholder="Enter SKU"
+									placeholder="Enter Energy"
 									
 								/>
 							</v-col>
 							<v-col cols="6">
-								<label>acidity_as_citric_acid</label>
+								<label>Acidity As Citric Acid</label>
 								<v-text-field
 									outlined
 									v-model="payload.acidity_as_citric_acid"
-									placeholder="Enter SKU"
+									placeholder="Enter Acidity As Citric Acid"
 									
 								/>
 							</v-col>
 							<v-col cols="6">
-								<label>sugar</label>
+								<label>Sugar</label>
 								<v-text-field
 									outlined
 									v-model="payload.sugar"
-									placeholder="Enter SKU"
+									placeholder="Enter Sugar"
 									
 								/>
 							</v-col>
 							<v-col cols="6">
-								<label>calcium</label>
+								<label>Calcium</label>
 								<v-text-field
 									outlined
 									v-model="payload.calcium"
-									placeholder="Enter SKU"
+									placeholder="Enter Calcium"
 									
 								/>
 							</v-col>
 							<v-col cols="6">
-								<label>trans_fat</label>
+								<label>Trans Fat</label>
 								<v-text-field
 									outlined
 									v-model="payload.trans_fat"
-									placeholder="Enter SKU"
+									placeholder="Enter Trans Fat"
 									
 								/>
 							</v-col>
 							<v-col cols="6">
-								<label>saturated_fat</label>
+								<label>Saturated Fat</label>
 								<v-text-field
 									outlined
 									v-model="payload.saturated_fat"
-									placeholder="Enter SKU"
+									placeholder="Enter Saturated Fat"
 									
 								/>
 							</v-col>
 							<v-col cols="6">
-								<label>sodium</label>
+								<label>Sodium</label>
 								<v-text-field
 									outlined
 									v-model="payload.sodium"
-									placeholder="Enter SKU"
+									placeholder="Enter Sodium"
 									
 								/>
 							</v-col>
 							<v-col cols="6">
-								<label>total_fat</label>
+								<label>Total Fat</label>
 								<v-text-field
 									outlined
 									v-model="payload.total_fat"
-									placeholder="Enter SKU"
+									placeholder="Enter Total Fat"
 									
 								/>
 							</v-col>
 							<v-col cols="6">
-								<label>citric_acid</label>
+								<label>Citric Acid</label>
 								<v-text-field
 									outlined
 									v-model="payload.citric_acid"
-									placeholder="Enter SKU"
+									placeholder="Enter Citric Acid"
 									
 								/>
 							</v-col>
 							<v-col cols="6">
-								<label>taurine</label>
+								<label>Taurine</label>
 								<v-text-field
 									outlined
 									v-model="payload.taurine"
-									placeholder="Enter SKU"
+									placeholder="Enter Taurine"
 									
 								/>
 							</v-col>
 							<v-col cols="6">
-								<label>caffeine</label>
+								<label>Caffeine</label>
 								<v-text-field
 									outlined
 									v-model="payload.caffeine"
-									placeholder="Enter SKU"
+									placeholder="Enter Caffeine"
 									
 								/>
 							</v-col>
 							<v-col cols="6">
-								<label>inositol</label>
+								<label>Inositol</label>
 								<v-text-field
 									outlined
 									v-model="payload.inositol"
-									placeholder="Enter SKU"
+									placeholder="Enter Inositol"
 									
 								/>
 							</v-col>
 							<v-col cols="6">
-								<label>niacin</label>
+								<label>Niacin</label>
 								<v-text-field
 									outlined
 									v-model="payload.niacin"
-									placeholder="Enter SKU"
+									placeholder="Enter Niacin"
 									
 								/>
 							</v-col>
 							<v-col cols="6">
-								<label>vitamin_b6</label>
+								<label>Vitamin B6</label>
 								<v-text-field
 									outlined
 									v-model="payload.vitamin_b6"
-									placeholder="Enter SKU"
+									placeholder="Enter Vitamin B6"
 									
 								/>
 							</v-col>
 							<v-col cols="6">
-								<label>vitamin_b3</label>
+								<label>Vitamin B3</label>
 								<v-text-field
 									outlined
 									v-model="payload.vitamin_b3"
-									placeholder="Enter SKU"
+									placeholder="Enter Vitamin B3"
 									
 								/>
 							</v-col>
 							<v-col cols="6">
-								<label>vitamin b12</label>
+								<label>vitamin B12</label>
 								<v-text-field
 									outlined
 									v-model="payload.vitamin_b12"
-									placeholder="Enter SKU"
+									placeholder="Enter Vitamin B12"
 									
 								/>
 							</v-col>
