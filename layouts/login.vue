@@ -14,7 +14,7 @@
 
 <script>
 import { mapFields } from 'vuex-map-fields'
-import LoginAPI from '~/utils/api/LoginAPI'
+import login from '@/utils/api/LoginAPI'
 
 export default {
 	computed: { ...mapFields(['snackbar', 'snackbar.state']) },

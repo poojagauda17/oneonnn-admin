@@ -1,7 +1,5 @@
 import pkg from './package.json'
 import colors from 'vuetify/es5/util/colors'
-import path from 'path'
-
 
 export default {
 	ssr: false,
@@ -18,9 +16,6 @@ export default {
 		],
 		// link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }],
 	},
-	alias: {
-		'@': path.resolve(__dirname),
-	  },
 	components: true,
 	axios: { baseURL: process.env.BASE_URL },
 	server: { port: 3002, host: 'localhost' },
