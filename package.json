@@ -28,6 +28,7 @@
         "core-js": "^3.19.3",
         "cross-env": "^7.0.3",
         "dayjs": "^1.11.13",
+        "global": "^4.4.0",
         "lodash": "4.17.21",
         "nuxt-socket-io": "3.0.12",
         "react-scripts": "^5.0.1",
@@ -40,7 +41,8 @@
         "vuejs-datepicker": "1.6.2",
         "vuetify": "^2.6.1",
         "vuex-map-fields": "1.4.1",
-        "webpack": "^4.46.0"
+        "webpack": "^4.46.0",
+        "yarn": "^1.22.22"
     },
     "devDependencies": {
         "@nuxtjs/vuetify": "^1.12.3",

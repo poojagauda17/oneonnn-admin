@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import LoginAPI from '@/utils/api/LoginAPI'
+import LoginAPI from '@/utils/api/loginApi'
 import { mapFields } from 'vuex-map-fields'
 
 export default {
