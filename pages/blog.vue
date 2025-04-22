@@ -63,15 +63,17 @@ export default {
 				},
 			
 				{
-					text: 'Category',
+					text: 'Blog Title',
 					sortable: false,
 					align: 'center',
 					value: 'title',
 					divider: true,
 					class: 'design_light white--text',
+					width: 100,
+
 				},
 				{
-					text: 'Subcategory',
+					text: 'Blog Description',
 					sortable: false,
 					align: 'center',
 					value: 'description',
@@ -79,7 +81,7 @@ export default {
 					class: 'design_light white--text',
 				},
 				{
-					text: 'Banner Image',
+					text: 'Blog Image',
 					sortable: false,
 					align: 'center',
 					value: 'image',
