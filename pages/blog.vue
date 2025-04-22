@@ -100,6 +100,7 @@ export default {
 			],
 		},
 	}),
+
 	layout: 'admin',
 	methods: {
 		async FetchData() {

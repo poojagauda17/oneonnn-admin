@@ -24,14 +24,22 @@
 							placeholder="Enter Blog Description" />
 					</v-col>
 
-					<v-col>
-						<label for="">Date</label>
-						<FormElementsDateInput small label="Start date" v-model="payload.date"
-							@change="FetchDataWithPagination" value="DD-MM-YYYY" />
-					</v-col>
+					<v-text-field
+  label="Start Date"
+  type="date"
+  v-model="payload.date"
+  :min="minDate"          
+  clearable
+  outlined
+  @click:clear="payload.date = ''"
+  @keydown.backspace="payload.date = ''"
+  @keydown.delete="payload.date = ''"
+/>
+
+
 					<v-col cols="6">
 						<label>Blog Image <sup class="red--text">*</sup></label>
-						<FormElementsFileInput multiple  v-model="payload.image"
+						<FormElementsFileInput  v-model="payload.image"
 							:errorMessage="errorMessages.image" @change="isImagesValidated(['image'])"
 							:UploadAPI="HomeScreenAPI.add_homescreen_image" />
 					</v-col>
@@ -70,6 +78,8 @@ export default {
 			date: '',
 			image: "",
 		},
+		minDate: new Date().toISOString().split("T")[0], 
+
 		// Error keys must match with the payload keys
 		// Only keys that must be kept here are the ones that are with Custom FILEINPUT Component
 		errorMessages: {
@@ -105,9 +115,9 @@ export default {
 			const isImagesValid = this.isImagesValidated(['page_thumbnail', 'banner_image_list'])
 
 			if (this.isValid && isImagesValid) {
-				if (Array.isArray(this.payload.image)) {
-					this.payload.image = this.payload.image[0];
-				}
+				if (this.payload.image && typeof this.payload.image === 'object' && this.payload.image.imageUrl) {
+      this.payload.image = this.payload.image.imageUrl;
+    }
 				try {
 					let response
 					if (this.edit) {
@@ -152,8 +162,8 @@ export default {
 					this.errorMessages[item] = this.payload[item] ? '' : 'This is required'
 					isValid = isValid && !!this.payload[item]
 				} else if (typeof this.payload[item] === 'object') {
-					this.errorMessages[item] = this.payload[item]?.length ? '' : 'This is required'
-					isValid = isValid && !!this.payload[item]?.length
+					this.errorMessages[item] = this.payload[item] ? '' : 'This is required'
+					isValid = isValid && !!this.payload[item]
 				}
 			})
 			return isValid
