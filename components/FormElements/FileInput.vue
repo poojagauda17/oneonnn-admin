@@ -92,6 +92,8 @@ import { cloneDeep, map } from 'lodash'
 export default {
 	data: () => ({
 		imageIssues: '',
+		not_image: false,
+
 		isLoading: false,
 		render: Date.now() + Math.floor(Math.random() * 10000 + 1),
 	}),
@@ -218,6 +220,13 @@ export default {
 					img.onload = () => {
 						const image_size = 1024 * 1024 * this.image_size
 						const fileSize = File.size
+if (fileSize > image_size) {
+  this.imageIssues = `${File.name}: Image size exceeds the maximum allowed size of ${this.image_size} MB`;
+  resolve(false);
+} else {
+  resolve(true);
+}
+
 						if (fileSize > image_size) {
 							this.imageIssues = `${File.name}: Image size exceeds the maximum allowed size of ${this.image_size} MB`
 							resolve(false)

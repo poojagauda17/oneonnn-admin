@@ -18,7 +18,7 @@
 						<v-row>
 							
 								<v-col cols="12">
-									<label>Desktop Banner<sup class="red--text">*</sup></label>
+									<label>Product Image<sup class="red--text">*</sup></label>
 									<FormElementsFileInput
 										v-model="payload.product_image"
 										:errorMessage="errorMessages.product_image"

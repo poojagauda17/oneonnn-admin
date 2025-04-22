@@ -1,5 +1,5 @@
 <template>
-	<v-container class="mt-10">
+	<v-container class="mt-10" >
 		<v-form v-model="isValid" ref="form">
 			<span class="text-h6">Name/ Email<sup class="red--text">*</sup></span>
 			<v-text-field
@@ -113,4 +113,12 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.container{
+padding: 30px;
+}
+
+@media (min-width: 1264px) {
+   
+}
+</style>

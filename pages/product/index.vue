@@ -86,7 +86,7 @@ export default {
 			image_construct: ['product_image'],
 			image_construct_size: ['square'],
 			header: [
-			{
+				{
 					text: 'Serial',
 					sortable: false,
 					align: 'center',
@@ -442,14 +442,17 @@ export default {
 				const response = await ProductAPI.deleteProduct({
 					product_id: itemToDelete,
 				})
-				if (response.status.status_code === 0) {
+				console.log('resposne ++++++++++++++++++++',response);
+				
+				if (response.data.status.status_code === 0) {
 					this.$store.dispatch('ActivateSnackBar', {
 						state: true,
 						color: 'green darken-4',
-						msg: 'Item deleted successfully',
+						msg: 'Product deleted successfully',
 					})
+					this.FetchDataWithPagination()
 				}
-				this.FetchDataWithPagination()
+				this.ReloadServerSideData = Date.now() + Math.floor(Math.random() * 10000 + 1)
 			} catch (err) {
 				console.log(err)
 			}

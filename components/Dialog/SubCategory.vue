@@ -14,14 +14,14 @@
 			<v-form v-model="isValid" ref="form">
 				<v-row>
 					<v-col cols="6">
-						<label>Title<span class="red--text">*</span></label>
-						<v-text-field outlined auto-select-first placeholder="Select Category" v-model="payload.title"
+						<label>Blog Heading<span class="red--text">*</span></label>
+						<v-text-field outlined auto-select-first placeholder="Enter Blog Heading" v-model="payload.title"
 							:rules="[rules.required]" />
 					</v-col>
 					<v-col cols="6">
-						<label>description<span class="red--text">*</span></label>
+						<label>Blog Description<span class="red--text">*</span></label>
 						<v-text-field outlined :rules="[rules.required]" v-model="payload.description"
-							placeholder="Enter description Name" />
+							placeholder="Enter Blog Description" />
 					</v-col>
 
 					<v-col>
@@ -30,8 +30,8 @@
 							@change="FetchDataWithPagination" value="DD-MM-YYYY" />
 					</v-col>
 					<v-col cols="6">
-						<label>Banner Image <sup class="red--text">*</sup></label>
-						<FormElementsFileInput multiple :image_width="1920" :image_height="670" v-model="payload.image"
+						<label>Blog Image <sup class="red--text">*</sup></label>
+						<FormElementsFileInput multiple  v-model="payload.image"
 							:errorMessage="errorMessages.image" @change="isImagesValidated(['image'])"
 							:UploadAPI="HomeScreenAPI.add_homescreen_image" />
 					</v-col>

@@ -15,7 +15,7 @@
 			<v-form v-model="isValid" ref="form">
 				<v-row>
 					<v-col cols="6">
-						<label>Desktop Banner<sup class="red--text">*</sup></label>
+						<label>Product Image<sup class="red--text">*</sup></label>
 						<FormElementsFileInput v-model="payload.image" :errorMessage="errorMessages.image"
 							@change="isImagesValidated(['image'])" :UploadAPI="HomeScreenAPI.add_homescreen_image" />
 					</v-col>

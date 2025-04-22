@@ -40,9 +40,9 @@ export default {
 			dark: false,
 			themes: {
 				light: {
-					design: '#0047ba',
-					design2: '#0047ba',
-					design_light: '#0047ba',
+					design: '#fc822c',
+					design2: '#fc822c',
+					design_light: '#fc822c',
 					info: colors.teal.lighten1,
 					warning: colors.amber.base,
 					accent: colors.grey.darken3,
