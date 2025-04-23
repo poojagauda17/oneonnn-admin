@@ -45,6 +45,17 @@
 									placeholder="Enter Title"
 								/>
 							</v-col>
+							<v-col cols="6">
+  <label>Product Details<span class="red--text">*</span></label>
+  <v-textarea
+    outlined
+    v-model="payload.details"
+    :rules="[rules.required]"
+    placeholder="Enter Title"
+    rows="3"               
+    auto-grow              
+  />
+</v-col>
 
 							<v-col cols="6">
 								<label>Weight <span class="red--text">*</span></label>
@@ -271,6 +282,8 @@ export default {
 		d_healthconcernList: [],
 		payload: {
 			product_name: '',
+			details: '',
+
 			product_image: '',
 			ingredients: '',
 			weight: '',
@@ -418,6 +431,7 @@ try {
 		ResetForm() {
 			this.payload = {
 				product_name: '',
+				details: '',
 				product_image: '',
 				ingredients: '',
 				weight: '',

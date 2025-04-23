@@ -104,6 +104,15 @@ export default {
 					class: 'design_light white--text',
 				},
 				{
+					text: 'Product Details',
+					sortable: false,
+					align: 'center',
+					value: 'details',
+					divider: true,
+					class: 'design_light white--text',
+					width: 200
+				},
+				{
 					text: 'Image',
 					divider: true,
 					align: 'center',
